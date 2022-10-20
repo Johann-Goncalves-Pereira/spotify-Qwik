@@ -24,7 +24,7 @@ export default component$(() => {
       </head>
       <body
         lang="en"
-        class="isolate grid h-screen grid-cols-[auto,1fr] grid-rows-[1fr,auto] gap-px bg-surface-100 p-[2px] text-surface-900 before:fixed before:inset-px before:-z-10 before:rounded-lg before:bg-gradient-100 before:content-blank"
+        class="isolate grid h-screen grid-cols-[auto,1fr] grid-rows-[1fr,auto] gap-px bg-surface-100 p-[2px] font-sans text-surface-900"
       >
         <RouterOutlet />
         <ServiceWorkerRegister />
