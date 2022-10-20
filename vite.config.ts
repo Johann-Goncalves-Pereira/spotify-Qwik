@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import path from "path";
 import netlifyEdge from "@netlify/vite-plugin-netlify-edge";
+
+import path from "path";
 
 export default defineConfig(() => {
   return {
@@ -18,8 +19,9 @@ export default defineConfig(() => {
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
-        "@component": path.resolve(__dirname, "src/components"),
-        "@router": path.resolve(__dirname, "src/routers"),
+        "@components": path.resolve(__dirname, "src/components"),
+        "@routers": path.resolve(__dirname, "src/routers"),
+        "@hooks": path.resolve(__dirname, "src/hooks"),
         "@styles": path.resolve(__dirname, "src/styles"),
       },
     },
