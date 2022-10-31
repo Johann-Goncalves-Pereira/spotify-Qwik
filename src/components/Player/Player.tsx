@@ -20,7 +20,7 @@ export const Player = component$(() => {
 
   return (
     <footer
-      class="relative col-span-2 max-h-28 min-h-[2rem] w-full rounded-b-lg bg-surface-100"
+      class="relative col-span-2 max-h-28 min-h-[2rem] w-full rounded-b-lg bg-surface-100/95"
       style={{ height: `calc(100vh - ${store.mouse.y}px - 2px)` }}
       aria-hidden={`${store.mouse.y <= 75}`}
     >

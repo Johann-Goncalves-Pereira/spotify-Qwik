@@ -33,5 +33,5 @@ postcss.config.js
 tailwind.config.js
 prettier.config.js
 .eslintrc.cjs
-
+whatamesh.mjs
 # Hooks

@@ -16,7 +16,7 @@ export const Sidebar = component$(() => {
 
   return (
     <header
-      class={`relative grid h-full max-w-sm grid-rows-[auto_auto_1fr] gap-3 rounded-tl-lg bg-surface-100 py-2 ${
+      class={`relative grid h-full max-w-sm grid-rows-[auto_auto_1fr] gap-3 rounded-tl-lg bg-surface-100/95 py-2 ${
         store.mouse.x <= 100 &&
         "pointer-events-none max-w-0 [&+main]:rounded-tl-lg"
       }`}

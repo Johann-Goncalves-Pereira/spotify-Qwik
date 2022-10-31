@@ -1,4 +1,5 @@
-import { CanvasGradient } from "./Gradient/Gradient";
 import { Icon } from "./Icon/Icon";
+import { Fluid } from "./Fluid/Fluid";
+import { RouterHead } from "./router-head/router-head";
 
-export { CanvasGradient, Icon };
+export { Fluid, Icon, RouterHead };

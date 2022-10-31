@@ -2,7 +2,7 @@ import { component$, Slot } from "@builder.io/qwik";
 import { Sidebar } from "@components/Sidebar";
 import { Player } from "@components/Player";
 import { Main } from "@components/Main";
-import { CanvasGradient } from "@components/Global";
+import { Fluid } from "@components/Global";
 
 export default component$(() => {
   return (
@@ -12,7 +12,7 @@ export default component$(() => {
         <Slot name="main" />
       </Main>
       <Player />
-      <CanvasGradient />
+      <Fluid />
     </>
   );
 });
