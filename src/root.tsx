@@ -6,7 +6,8 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "@components/Global/";
 
-import styles from "@styles/_index.scss";
+import "victormono";
+import styles from "@styles/_index.scss?inline";
 
 export default component$(() => {
   useStyles$(styles);
@@ -24,7 +25,7 @@ export default component$(() => {
       </head>
       <body
         lang="en"
-        class="isolate m-0 grid h-screen grid-cols-[auto,1fr] grid-rows-[1fr,auto] gap-px bg-surface-100/95 p-[2px] font-sans text-surface-900"
+        class="isolate m-0 grid h-screen grid-cols-[auto,1fr] grid-rows-[1fr,auto] gap-px bg-surface-100/95 p-[2px] font-mono text-surface-900"
       >
         <RouterOutlet />
         <ServiceWorkerRegister />
