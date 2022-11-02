@@ -26,7 +26,7 @@
     "@builder.io/qwik-city": "^0.0.118",
     "@netlify/vite-plugin-netlify-edge": "^1.1.1",
     "@types/eslint": "^8.4.9",
-    "@types/node": "latest",
+    "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "autoprefixer": "^10.4.13",
@@ -34,7 +34,7 @@
     "eslint": "^8.26.0",
     "eslint-plugin-qwik": "^0.12.1",
     "node-fetch": "^3.2.10",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.18",
     "postcss-nesting": "^10.2.0",
     "postcss-preset-env": "^7.8.2",
     "prettier": "^2.7.1",
@@ -44,5 +44,8 @@
     "typescript": "4.8.4",
     "vite": "^3.2.2",
     "vite-tsconfig-paths": "^3.5.2"
+  },
+  "dependencies": {
+    "victormono": "^1.5.4"
   }
 }
