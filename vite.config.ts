@@ -22,7 +22,6 @@ export default defineConfig(() => {
         "@components": path.resolve(__dirname, "src/components"),
         "@routers": path.resolve(__dirname, "src/routers"),
         "@hooks": path.resolve(__dirname, "src/hooks"),
-        "@styles": path.resolve(__dirname, "src/styles"),
       },
     },
   };
