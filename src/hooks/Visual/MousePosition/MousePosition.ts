@@ -1,6 +1,6 @@
 import { $, useOnWindow } from "@builder.io/qwik";
 
-type mousePositionProps = {
+export type mousePositionProps = {
   x: number;
   y: number;
   dragging?: boolean;

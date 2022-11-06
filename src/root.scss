@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// & Custom media queries
+// ? Reference: https://github.com/argyleink/open-props/blob/main/src/props.media.css
+
+@custom-media --motionOK (prefers-reduced-motion: no-preference);
+@custom-media --motionNotOK (prefers-reduced-motion: reduce);
+@custom-media --opacityOK (prefers-reduced-transparency: no-preference);
+@custom-media --opacityNotOK (prefers-reduced-transparency: reduce);
+@custom-media --useDataOK (prefers-reduced-data: no-preference);
+@custom-media --useDataNotOK (prefers-reduced-data: reduce);
+
+@custom-media --OSdark (prefers-color-scheme: dark);
+@custom-media --OSlight (prefers-color-scheme: light);
+
+@custom-media --highContrast (prefers-contrast: more);
+@custom-media --lowContrast (prefers-contrast: less);
+
+@custom-media --portrait (orientation: portrait);
+@custom-media --landscape (orientation: landscape);
+
+@custom-media --HDcolor (dynamic-range: high);
+
+@custom-media --touch (hover: none) and (pointer: coarse);
+@custom-media --stylus (hover: none) and (pointer: fine);
+@custom-media --pointer (hover) and (pointer: coarse);
+@custom-media --mouse (hover) and (pointer: fine);
+
+// & Custom selectors
+
+@custom-selector :--bases html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video;
+
+// & Custom properties
+
+:root {
+	--scrollbar-color: theme("colors.teal.500");
+}
+
+// & Reset
+
+:where(*, *::before, *::after) {
+	line-height: inherit !important;
+	scrollbar-width: inherit;
+	scrollbar-color: inherit;
+}
+
+body {
+	$padding: 3px;
+	padding: $padding;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--scrollbar-color) transparent;
+
+	line-height: calc(0.5rem + 1ex) !important;
+
+	&::before {
+		content: "";
+		position: fixed;
+		inset: $padding - 1px;
+		border-radius: theme("borderRadius.lg");
+		box-shadow: 0 0 0 $padding * 10 theme("colors.surface.100/99");
+		opacity: 0.75;
+		z-index: -10;
+	}
+}
+
+::placeholder {
+	color: inherit;
+	opacity: 0.5;
+}
+
+::selection {
+	background-color: theme("colors.brand.30");
+	color: theme("colors.surface.100");
+}
+
+::-webkit-scrollbar {
+	background-color: transparent;
+	border-radius: theme("borderRadius.full");
+
+	width: 0.25rem;
+	height: 0.25rem;
+
+	&-track {
+		border-radius: theme("borderRadius.full");
+	}
+
+	&-thumb {
+		background-color: transparent;
+
+		&:hover {
+			background-color: var(--scrollbar-color);
+		}
+	}
+}
+
+.material-symbols-rounded {
+	line-height: 1ex !important;
+}
+
+// & Accessibility
+// : Remove all animations, transitions and smooth scroll for people that prefer not to see them
+@media (--motionNotOK) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
