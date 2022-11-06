@@ -5,6 +5,17 @@ module.exports = {
     fontFamily: {
       mono: ["Victor Mono", "JetBrains Mono", "monospace"],
     },
+    fontWeight: {
+      100: 100,
+      200: 200,
+      300: 300,
+      400: 400,
+      500: 500,
+      600: 600,
+      700: 700,
+      800: 800,
+      900: 900,
+    },
     extend: {
       content: {
         blank: "''",
@@ -27,6 +38,9 @@ module.exports = {
           900: "hsl(180 4% 96%)",
         },
       },
+      backgroundOpacity: {
+        99: "0.99",
+      },
       backgroundImage: {
         "gradient-100":
           "linear-gradient(210deg, theme(colors.brand.10), theme(colors.brand.30), theme(colors.brand.60))",
@@ -34,7 +48,4 @@ module.exports = {
     },
   },
   plugins: [],
-  corePlugins: {
-    preflight: false,
-  },
 };
